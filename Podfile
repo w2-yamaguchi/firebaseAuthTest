@@ -12,14 +12,4 @@ target 'firebaseAuthTest' do
   pod 'FacebookLogin'
   pod 'FacebookShare'
 
-  target 'firebaseAuthTestTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'firebaseAuthTestUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end

@@ -1,140 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="SignInScene" id="BYZ-38-t0r" customClass="ViewController" customModule="firebaseAuthTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="HcS-M6-zfs">
-                                <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEK-1y-ffr">
-                                <rect key="frame" x="47" y="555" width="280" height="62"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="Lfi-HP-6Ra"/>
-                                    <constraint firstAttribute="height" constant="62" id="TKn-CQ-5S8"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="fbLoginButton"/>
-                                <connections>
-                                    <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TFc-AA-KXr"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="HcS-M6-zfs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="0Wq-Y3-FHz"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XEK-1y-ffr" secondAttribute="bottom" constant="50" id="FLD-ws-hte"/>
-                            <constraint firstItem="HcS-M6-zfs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Imm-6z-YIN"/>
-                            <constraint firstItem="XEK-1y-ffr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YCe-PQ-Of0"/>
-                            <constraint firstItem="HcS-M6-zfs" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="mu4-15-e2j"/>
-                            <constraint firstItem="HcS-M6-zfs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uSb-GC-3pF"/>
-                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <segue destination="zX4-ks-72Q" kind="presentation" identifier="SignedInSegue" id="KvU-pP-MYZ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-89" y="37"/>
-        </scene>
-        <!--Main View Controller-->
-        <scene sceneID="2tt-H0-mZe">
-            <objects>
-                <viewController id="zX4-ks-72Q" customClass="MainViewController" customModule="firebaseAuthTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DNy-VU-WsR"/>
-                        <viewControllerLayoutGuide type="bottom" id="t4b-as-yQU"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0GE-ob-IpI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IB1-Re-Ujg">
-                                <rect key="frame" x="47" y="555" width="280" height="62"/>
-                                <color key="backgroundColor" red="0.23235589265823364" green="0.34942615032196045" blue="0.59503674507141113" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="62" id="3cv-7k-46C"/>
-                                    <constraint firstAttribute="width" constant="280" id="Nxd-Ax-GnL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Sign out">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="SignOutTapped:" destination="zX4-ks-72Q" eventType="touchUpInside" id="vvZ-PB-ewN"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="Esc-QS-QDU">
-                                <rect key="frame" x="137" y="120" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="bX4-Dw-G3y"/>
-                                    <constraint firstAttribute="width" constant="100" id="yEF-31-oaf"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="50"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQh-N1-ucY">
-                                <rect key="frame" x="38" y="250" width="300" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.9859148952627429" green="0.9859148952627429" blue="0.9859148952627429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="HQh-N1-ucY" firstAttribute="centerX" secondItem="0GE-ob-IpI" secondAttribute="centerX" id="HV1-91-rrC"/>
-                            <constraint firstItem="IB1-Re-Ujg" firstAttribute="centerX" secondItem="0GE-ob-IpI" secondAttribute="centerX" id="PDg-ic-sv1"/>
-                            <constraint firstItem="Esc-QS-QDU" firstAttribute="centerX" secondItem="0GE-ob-IpI" secondAttribute="centerX" id="Qmn-Q4-zvZ"/>
-                            <constraint firstItem="Esc-QS-QDU" firstAttribute="top" secondItem="DNy-VU-WsR" secondAttribute="bottom" constant="100" id="TFy-Lk-hYp"/>
-                            <constraint firstItem="HQh-N1-ucY" firstAttribute="width" secondItem="0GE-ob-IpI" secondAttribute="width" multiplier="0.8" id="XzG-SR-D1k"/>
-                            <constraint firstItem="t4b-as-yQU" firstAttribute="top" secondItem="IB1-Re-Ujg" secondAttribute="bottom" constant="50" id="jod-9C-Kvp"/>
-                            <constraint firstItem="HQh-N1-ucY" firstAttribute="top" secondItem="Esc-QS-QDU" secondAttribute="bottom" constant="30" id="nhb-uz-m22"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="displayNameLabel" destination="HQh-N1-ucY" id="hP2-A4-UD0"/>
-                        <outlet property="profileImageView" destination="Esc-QS-QDU" id="R7r-4P-Xse"/>
-                        <segue destination="Afs-Pg-mC4" kind="presentation" identifier="SignedOutSegue" id="9Vd-MH-Aon"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y2p-wh-0xF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="860" y="37.331334332833585"/>
-        </scene>
-        <!--SignInScene-->
-        <scene sceneID="fBW-S4-Hv2">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="SignInScene" id="Afs-Pg-mC4" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yKJ-IB-5zA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1555" y="38"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="background" width="1920" height="1280"/>
-        <image name="fbLoginButton" width="560" height="124"/>
-        <image name="person" width="128" height="128"/>
-    </resources>
 </document>
