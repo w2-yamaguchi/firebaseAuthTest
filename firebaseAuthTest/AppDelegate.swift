@@ -2,13 +2,12 @@
 //  AppDelegate.swift
 //  firebaseAuthTest
 //
-//  Created by Yamaguchi Wataru on 2017/05/07.
-//  Copyright © 2017年 Yamaguchi Wataru. All rights reserved.
+//  Created by Wataru Yamaguchi on 2019/02/15.
 //
 
 import UIKit
 import Firebase
-import FBSDKCoreKit
+import FacebookCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,15 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         // MARK: - Firebase
-        FIRApp.configure()
+        FirebaseApp.configure()
         
         // MARK: - Facebook
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        
+        SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+
         return true
     }
 
@@ -42,23 +41,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
 
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        
-        // MARK: - Facebook
-        FBSDKAppEvents.activateApp()
-    }
-
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    // MARK: - Facebook
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        let handled:Bool = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options)
-        return handled
-    }
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        // MARK: - Facebook
+        return SDKApplicationDelegate.shared.application(app, open: url, options: options)
+    }
 
 }
 
