@@ -19,4 +19,4 @@ $ open firebaseAuthTest.xcworkspace
 ```
 
 [swift]: https://github.com/apple/swift
-[qiita]: http://qiita.com/w2-yamaguchi/items/6aabc18759e863a87d9f
+[qiita]: http://qiita.com/w2-yamaguchi/items/b2653b2736ca64b18b0e
